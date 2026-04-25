@@ -109,11 +109,6 @@ class GameState:
             self.enemy_shoot_timer = 0
             shooters = list(self.enemies)
             shooter = shooters[self.enemy_move_timer % len(shooters)]
-            self.enemy_bullets.add(
-                type(shooter)(shooter.rect.centerx, shooter.rect.bottom, 0, self.sound)()
-                if False else __import__('builtins', fromlist='object').__dict__.get('Bullet')
-            )
-            from entities import Bullet
             self.enemy_bullets.add(Bullet(shooter.rect.centerx, shooter.rect.bottom, enemy=True))
             self.sound.play("enemy_shoot")
 
