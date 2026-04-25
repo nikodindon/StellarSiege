@@ -4,7 +4,7 @@
 
 import pygame
 from src.constants import *
-from src.entities import Enemy, StarField
+from src.entities import Enemy, Bullet, Explosion, StarField
 
 # States
 MENU = "menu"
@@ -63,7 +63,6 @@ class GameState:
         self._spawn_wave()
 
     def add_explosion(self, x, y):
-        from entities import Explosion
         self.explosions.append(Explosion(x, y))
 
     def update(self, keys):
