@@ -1,9 +1,6 @@
 # Sound Manager — 8-bit procedural synthesis (numpy + pygame.mixer)
 # No external audio files needed.
 
-import os
-os.environ["SDL_AUDIODRIVER"] = "dummy"
-
 import pygame
 import numpy as np
 
